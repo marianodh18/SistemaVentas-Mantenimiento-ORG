@@ -6,3 +6,7 @@ target/
 .idea/
 .vscode/
 .DS_Store
+*.iml
+build/
+nbproject/private/
+Thumbs.db
