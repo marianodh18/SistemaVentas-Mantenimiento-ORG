@@ -3,7 +3,6 @@ package service;
 import model.Cliente;
 import repository.ClienteRepository;
 import util.Console;
-import util.Validaciones;
 
 public class ClienteService {
 
@@ -13,11 +12,11 @@ public class ClienteService {
         this.clienteRepo = clienteRepo;
     }
 
-    // BUG intencional: validarDni está mal en util.Validaciones
     public void registrarCliente(String dni, String nombre, String tipo) {
 
-        if (!Validaciones.validarDni(dni)) {
-            Console.error("DNI inválido");
+        // DNI obligatorio y de 8 dígitos numéricos
+        if (dni == null || dni.trim().isEmpty() || !dni.matches("\\d{8}")) {
+            System.out.println("ERROR: Cliente inválido");
             return;
         }
 
