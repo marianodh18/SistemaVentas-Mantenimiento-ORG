@@ -47,4 +47,8 @@ public class ReporteService {
     public void mostrarCantidadVentas(int cantidad) {
         System.out.println("Cantidad de ventas registradas: " + cantidad);
     }
+
+    public void imprimirTituloReporte() {
+        System.out.println("=== REPORTE GENERAL DE VENTAS ===");
+    }
 }
