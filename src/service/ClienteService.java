@@ -6,7 +6,7 @@ import util.Console;
 
 public class ClienteService {
 
-    private ClienteRepository clienteRepo;
+    private final ClienteRepository clienteRepo;
 
     public ClienteService(ClienteRepository clienteRepo) {
         this.clienteRepo = clienteRepo;
@@ -16,7 +16,7 @@ public class ClienteService {
 
         // DNI obligatorio y de 8 dígitos numéricos
         if (dni == null || dni.trim().isEmpty() || !dni.matches("\\d{8}")) {
-            System.out.println("ERROR: Cliente inválido");
+            Console.error("Cliente inválido");
             return;
         }
 

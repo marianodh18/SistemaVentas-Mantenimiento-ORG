@@ -14,8 +14,7 @@ public class Validaciones {
         return precio >= 0;
     }
 
-    // BUG intencional: acepta cantidad 0 (debería ser > 0)
     public static boolean validarCantidad(int cantidad) {
-        return cantidad >= 0;
+        return cantidad > 0;
     }
 }

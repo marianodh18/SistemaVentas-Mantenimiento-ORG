@@ -7,7 +7,7 @@ import util.Validaciones;
 
 public class ProductoService {
 
-    private ProductoRepository productoRepo;
+    private final ProductoRepository productoRepo;
 
     public ProductoService(ProductoRepository productoRepo) {
         this.productoRepo = productoRepo;
